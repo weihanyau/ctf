@@ -1,0 +1,8 @@
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-07-06 22:03 +0800
+Nmap scan report for 10.10.11.221
+Host is up (0.028s latency).
+Not shown: 998 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    nginx
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
