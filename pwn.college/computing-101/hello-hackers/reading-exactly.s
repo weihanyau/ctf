@@ -3,7 +3,7 @@
 _start:
 mov rax, 0
 mov rdi, 0
-add rsp, 16
+sub rsp, 128
 mov rsi, rsp
 mov rdx, 128
 syscall
