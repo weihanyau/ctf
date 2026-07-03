@@ -1,0 +1,9 @@
+[assembler]
+name = "nasm"
+
+[instruction_set]
+name = "x86_64"
+
+[client]
+hover = true
+autocomplete = true
