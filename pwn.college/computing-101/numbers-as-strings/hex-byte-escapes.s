@@ -103,24 +103,6 @@ backslash_x_two_hex:
 	add  rsi, 4
 	jmp  print_byte
 
-htoi:
-	cmp rdi, 0x39
-	jle htoi_digit
-	jmp htoi_alphabet
-
-htoi_digit:
-	sub rdi, 0x30
-	mov rax, rdi
-	jmp htoi_done
-
-htoi_alphabet:
-	sub rdi, 0x57
-	mov rax, rdi
-	jmp htoi_done
-
-htoi_done:
-	ret
-
 percentage:
 	cmp byte ptr [rsi + 1], 0x25 # check '%%'
 	je  double_percentage
@@ -298,3 +280,20 @@ itoa_end:
 	mov rax, r8
 	ret
 
+htoi:
+	cmp rdi, 0x39
+	jle htoi_digit
+	jmp htoi_alphabet
+
+htoi_digit:
+	sub rdi, 0x30
+	mov rax, rdi
+	jmp htoi_done
+
+htoi_alphabet:
+	sub rdi, 0x57
+	mov rax, rdi
+	jmp htoi_done
+
+htoi_done:
+	ret
