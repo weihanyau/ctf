@@ -52,7 +52,7 @@ backslash_x:
 	xor r13, r13
 	mov r13b, byte ptr [rsi + 2]
 	sub r13, 0x30
-	cmp r13, 9 # check '\(0-9)'
+	cmp r13, 9 # check '\x(hex)'
 	jle backslash_x_one_hex
 	xor r13, r13
 	mov r13b, byte ptr [rsi + 2]
@@ -65,7 +65,7 @@ backslash_x_one_hex:
 	xor r13, r13
 	mov r13b, byte ptr [rsi + 3]
 	sub r13, 0x30
-	cmp r13, 9 # check '\(0-9)(0-9)'
+	cmp r13, 9 # check '\x(hex)(hex)'
 	jle backslash_x_two_hex
 	xor r13, r13
 	mov r13b, byte ptr [rsi + 3]
