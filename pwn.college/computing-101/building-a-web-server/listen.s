@@ -19,6 +19,12 @@ _start:
 	mov rdx, 16
 	syscall
 
+	// listen
+	mov rax, 50
+	mov rdi, r12
+	mov rsi, 0
+	syscall
+
 	// exit
 	mov rax, 60
 	mov rdi, 0
